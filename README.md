@@ -48,11 +48,11 @@ If you are using a different package manager, be sure to update the package.json
 1. Check project formatting
 
 ```bash
-pnpm format:check
+yarn format:check
 ```
 
 2. Format the project
 
 ```bash
-pnpm format
+yarn format
 ```
