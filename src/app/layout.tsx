@@ -67,12 +67,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en" suppressHydrationWarning>
       <head />
-      <body
-        className={cn(
-          "overflow-none h-dvh bg-background antialiased",
-          inter.className
-        )}
-      >
+      <body className={cn("h-dvh bg-background antialiased", inter.className)}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
