@@ -67,7 +67,12 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en" suppressHydrationWarning>
       <head />
-      <body className={cn("h-dvh bg-background antialiased", inter.className)}>
+      <body
+        className={cn(
+          "h-dvh bg-background antialiased selection:bg-foreground selection:text-background",
+          inter.className
+        )}
+      >
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
