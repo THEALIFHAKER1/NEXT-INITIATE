@@ -54,6 +54,11 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.ico",
   },
+  appleWebApp: {
+    title: siteConfig.name,
+    startupImage: "/favicon.ico",
+    statusBarStyle: "black-translucent",
+  },
 }
 
 export const viewport: Viewport = {
