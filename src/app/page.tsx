@@ -4,11 +4,11 @@ import Link from "next/link"
 import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
 import { buttonVariants } from "@/components/ui/button"
-import { ModeToggle } from "@/components/mode-toggle"
+import { ModeToggle } from "@/components/theme/mode-toggle"
 
 export default function Home() {
   return (
-    <main className="flex h-screen items-center justify-center">
+    <main className="flex h-full items-center justify-center">
       <div className="container flex max-w-[64rem] flex-col items-center gap-4 text-center">
         <Image src={"/favicon.ico"} alt="Logo" width={64} height={64} />
         <h1 className="text-4xl font-semibold sm:text-5xl md:text-6xl lg:text-7xl">
