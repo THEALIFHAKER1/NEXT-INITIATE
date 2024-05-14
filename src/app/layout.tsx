@@ -1,13 +1,10 @@
 import type { Metadata } from "next";
-import { Inter as FontSans } from "next/font/google";
-import { cn } from "@/lib/utils";
+import { Inter } from "next/font/google";
 import "@/styles/globals.css";
 import { ThemeProvider } from "next-themes";
+import WrapperPage from "@/components/layout/wrapper-page";
 
-const fontSans = FontSans({
-  subsets: ["latin"],
-  variable: "--font-sans",
-});
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -23,10 +20,16 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head />
       <body
-        className={cn(
-          "min-h-screen bg-background font-sans antialiased",
-          fontSans.variable
-        )}
+        className={`
+          h-dvh
+          antialiased
+          bg-background 
+          overscroll-none
+          select-none
+          selection:bg-foreground
+          selection:text-background
+          ${inter.className}
+        `}
       >
         <ThemeProvider
           attribute="class"
@@ -34,7 +37,9 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <main>{children}</main>
+          <WrapperPage>
+            <main className="max-w-screen-2xl mx-auto h-full">{children}</main>
+          </WrapperPage>
         </ThemeProvider>
       </body>
     </html>
