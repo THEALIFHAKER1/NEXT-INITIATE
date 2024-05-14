@@ -1,6 +1,6 @@
 {
-  "name": "NEXT SERVE",
-  "short_name": "NEXT SERVE",
+  "name": "NEXT INITIATE",
+  "short_name": "NEXT INITIATE",
   "description": "Next.js 14+ starter template with app router, shadcn/ui, typesafe env, icons and configs setup.",
   "icons": [
     {

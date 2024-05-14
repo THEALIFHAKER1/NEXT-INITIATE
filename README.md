@@ -1,4 +1,4 @@
-# NEXT SERVE
+# NEXT INITIATE
 
 NEXT.js 14+ starter template with app router, shadcn/ui, typesafe env, icons and configs setup.
 
@@ -7,19 +7,19 @@ NEXT.js 14+ starter template with app router, shadcn/ui, typesafe env, icons and
 1. Setup a project using the template
 
 ```bash
-pnpm create next-app -e https://github.com/THEALIFHAKER1/NEXT-SERVE
+pnpm create next-app -e https://github.com/THEALIFHAKER1/NEXT-INITIATE
 ```
 
 ```bash
-npx create-next-app -e https://github.com/THEALIFHAKER1/NEXT-SERVE
+npx create-next-app -e https://github.com/THEALIFHAKER1/NEXT-INITIATE
 ```
 
 ```bash
-yarn create next-app -e https://github.com/THEALIFHAKER1/NEXT-SERVE
+yarn create next-app -e https://github.com/THEALIFHAKER1/NEXT-INITIATE
 ```
 
 ```bash
-bunx create-next-app -e https://github.com/THEALIFHAKER1/NEXT-SERVE
+bunx create-next-app -e https://github.com/THEALIFHAKER1/NEXT-INITIATE
 ```
 
 2. Copy `.env.example` to `.env.local`
