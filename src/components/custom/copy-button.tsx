@@ -51,11 +51,8 @@ export function CopyNpmCommandButton({
       <DropdownMenuTrigger asChild>
         <Button
           size="icon"
-          variant="ghost"
-          className={cn(
-            "relative z-10 h-6 w-6 text-zinc-50 hover:bg-zinc-700 hover:text-zinc-50",
-            className
-          )}
+          variant="default"
+          className={cn("relative z-10 h-6 w-6 ", className)}
         >
           {hasCopied ? (
             <CheckIcon className="h-3 w-3" />
