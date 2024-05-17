@@ -89,8 +89,13 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <WrapperPage vaul-drawer-wrapper="">
-            <main className="mx-auto h-full max-w-screen-2xl">{children}</main>
+          <WrapperPage>
+            <main
+              vaul-drawer-wrapper=""
+              className="mx-auto h-full max-w-screen-2xl"
+            >
+              {children}
+            </main>
           </WrapperPage>
         </ThemeProvider>
       </body>
