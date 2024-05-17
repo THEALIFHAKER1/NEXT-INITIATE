@@ -73,7 +73,7 @@ export default function RootLayout({
       <head />
       <body
         className={`
-          h-dvh
+          !h-dvh
           select-none
           overscroll-none 
           bg-background
@@ -89,7 +89,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <WrapperPage>
+          <WrapperPage vaul-drawer-wrapper="">
             <main className="mx-auto h-full max-w-screen-2xl">{children}</main>
           </WrapperPage>
         </ThemeProvider>

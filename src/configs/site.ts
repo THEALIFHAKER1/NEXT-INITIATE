@@ -25,6 +25,7 @@ export const siteConfig: SiteTypes = {
   },
   links: {
     github: "https://github.com/THEALIFHAKER1/NEXT-INITIATE",
+    docs: `${env.NEXT_PUBLIC_DOCS_URL}`,
   },
   ogImage: `${env.NEXT_PUBLIC_APP_URL}/api/og`,
 }

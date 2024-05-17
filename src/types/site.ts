@@ -9,6 +9,7 @@ export type SiteTypes = {
   }
   links: {
     github: string
+    docs?: string
   }
   ogImage: string
 }
