@@ -1,22 +1,22 @@
-"use client";
+"use client"
 
-import { motion } from "framer-motion";
-import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
-import { useTheme } from "next-themes";
+import { useEffect, useState } from "react"
+import { usePathname } from "next/navigation"
+import { motion } from "framer-motion"
+import { useTheme } from "next-themes"
 
 export default function WrapperPage({
   children,
 }: {
-  children: React.ReactNode;
+  children: React.ReactNode
 }) {
-  const pathname = usePathname();
-  const { theme } = useTheme();
-  const [currentTheme, setCurrentTheme] = useState(theme);
+  const pathname = usePathname()
+  const { theme } = useTheme()
+  const [currentTheme, setCurrentTheme] = useState(theme)
 
   useEffect(() => {
-    setCurrentTheme(theme);
-  }, [theme]);
+    setCurrentTheme(theme)
+  }, [theme])
 
   return (
     <motion.div
@@ -28,5 +28,5 @@ export default function WrapperPage({
     >
       {children}
     </motion.div>
-  );
+  )
 }

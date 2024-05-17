@@ -1,15 +1,16 @@
-import TextDecryption from "@/components/custom/text-decryption";
-import { ThemeSwitcher } from "@/components/custom/theme-switcher";
-import { Icons } from "@/components/icons/icons";
-import { buttonVariants } from "@/components/ui/button";
-import { siteConfig } from "@/configs/site";
-import { cn } from "@/lib/utils";
-import Link from "next/link";
+import Link from "next/link"
+import { siteConfig } from "@/configs/site"
+
+import { cn } from "@/lib/utils"
+import { buttonVariants } from "@/components/ui/button"
+import TextDecryption from "@/components/custom/text-decryption"
+import { ThemeSwitcher } from "@/components/custom/theme-switcher"
+import { Icons } from "@/components/icons/icons"
 
 function HomePage() {
   return (
     <>
-      <div className="container flex max-w-[64rem] flex-col items-center gap-4 text-center h-full justify-center">
+      <div className="container flex h-full max-w-[64rem] flex-col items-center justify-center gap-4 text-center">
         <Icons.logo className="h-20 w-20" />
         <TextDecryption
           targetText={siteConfig.name}
@@ -30,7 +31,7 @@ function HomePage() {
         </div>
       </div>
     </>
-  );
+  )
 }
 
-export default HomePage;
+export default HomePage

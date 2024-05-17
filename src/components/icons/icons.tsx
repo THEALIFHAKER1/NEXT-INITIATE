@@ -1,15 +1,15 @@
-import { Moon, PencilRuler, SunMedium } from "lucide-react";
+import { Moon, PencilRuler, SunMedium } from "lucide-react"
 
-export type IconKeys = keyof typeof icons;
+export type IconKeys = keyof typeof icons
 
 type IconsType = {
-  [key in IconKeys]: React.ElementType;
-};
+  [key in IconKeys]: React.ElementType
+}
 
 const icons = {
   logo: PencilRuler,
   sun: SunMedium,
   moon: Moon,
-};
+}
 
-export const Icons: IconsType = icons;
+export const Icons: IconsType = icons

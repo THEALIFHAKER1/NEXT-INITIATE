@@ -1,7 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import { ImageResponse } from "next/og"
-import { NextRequest } from "next/server"
-import { siteConfig } from "@/configs/site"
+import { type NextRequest } from "next/server"
 
 import { env } from "@/env.js"
 
@@ -11,7 +10,7 @@ const interBold = fetch(
   new URL("../../../assets/fonts/Inter-Bold.ttf", import.meta.url)
 ).then((res) => res.arrayBuffer())
 
-export async function GET(req: NextRequest) {
+export async function GET(_req: NextRequest) {
   try {
     const fontBold = await interBold
 

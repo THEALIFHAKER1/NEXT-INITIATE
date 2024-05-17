@@ -1,11 +1,14 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "@/styles/globals.css";
-import { ThemeProvider } from "next-themes";
-import WrapperPage from "@/components/layout/wrapper-page";
-import { siteConfig } from "@/configs/site";
+import type { Metadata } from "next"
+import { Inter } from "next/font/google"
 
-const inter = Inter({ subsets: ["latin"] });
+import "@/styles/globals.css"
+
+import { siteConfig } from "@/configs/site"
+import { ThemeProvider } from "next-themes"
+
+import WrapperPage from "@/components/layout/wrapper-page"
+
+const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   icons: {
@@ -59,11 +62,11 @@ export const metadata: Metadata = {
     images: [siteConfig.ogImage],
     creator: "@THEALIFHAKER1",
   },
-};
+}
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
@@ -71,10 +74,10 @@ export default function RootLayout({
       <body
         className={`
           h-dvh
-          antialiased
-          bg-background 
-          overscroll-none
           select-none
+          overscroll-none 
+          bg-background
+          antialiased
           selection:bg-foreground
           selection:text-background
           ${inter.className}
@@ -87,10 +90,10 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <WrapperPage>
-            <main className="max-w-screen-2xl mx-auto h-full">{children}</main>
+            <main className="mx-auto h-full max-w-screen-2xl">{children}</main>
           </WrapperPage>
         </ThemeProvider>
       </body>
     </html>
-  );
+  )
 }
