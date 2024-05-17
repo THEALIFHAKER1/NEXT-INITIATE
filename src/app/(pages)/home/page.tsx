@@ -95,7 +95,7 @@ function CopyCommand() {
       <pre
         className={cn("overflow-x-auto rounded-lg border bg-foreground/10 p-4")}
       >
-        <code className="select-text text-wrap">{npm}</code>
+        <div className="select-text text-wrap text-left">{npm}</div>
       </pre>
       <CopyNpmCommandButton
         commands={{
