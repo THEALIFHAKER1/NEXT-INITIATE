@@ -1,6 +1,6 @@
-import { SiteTypes } from "@/types";
+import { SiteTypes } from "@/types"
 
-import { env } from "@/env.mjs";
+import { env } from "@/env.js"
 
 export const siteConfig: SiteTypes = {
   name: "NEXT INITIATE",
@@ -27,4 +27,4 @@ export const siteConfig: SiteTypes = {
     github: "https://github.com/THEALIFHAKER1/NEXT-INITIATE",
   },
   ogImage: `${env.NEXT_PUBLIC_APP_URL}/api/og`,
-};
+}

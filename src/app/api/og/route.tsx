@@ -1,18 +1,19 @@
 /* eslint-disable @next/next/no-img-element */
-import { siteConfig } from "@/configs/site";
-import { env } from "@/env.mjs";
-import { ImageResponse } from "next/og";
-import { NextRequest } from "next/server";
+import { ImageResponse } from "next/og"
+import { NextRequest } from "next/server"
+import { siteConfig } from "@/configs/site"
 
-export const runtime = "edge";
+import { env } from "@/env.js"
+
+export const runtime = "edge"
 
 const interBold = fetch(
   new URL("../../../assets/fonts/Inter-Bold.ttf", import.meta.url)
-).then((res) => res.arrayBuffer());
+).then((res) => res.arrayBuffer())
 
 export async function GET(req: NextRequest) {
   try {
-    const fontBold = await interBold;
+    const fontBold = await interBold
 
     return new ImageResponse(
       (
@@ -49,8 +50,8 @@ export async function GET(req: NextRequest) {
           },
         ],
       }
-    );
+    )
   } catch (error) {
-    return new Response("Internal Server Error", { status: 500 });
+    return new Response("Internal Server Error", { status: 500 })
   }
 }
