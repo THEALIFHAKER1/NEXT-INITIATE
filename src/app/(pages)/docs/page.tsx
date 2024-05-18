@@ -3,6 +3,7 @@ import { HeadingText } from "@/components/custom/heading-text"
 import { ThemeSwitcher } from "@/components/custom/theme-switcher"
 
 import DrizzleComponents from "./_components/drizzle-components/drizzle-components"
+import IconsComponents from "./_components/icons-components/icons-components"
 import ServerClientComponets from "./_components/server-client-components/server-client-components"
 
 export default function DocsPage() {
@@ -31,6 +32,18 @@ export default function DocsPage() {
           </HeadingText>
         }
         contentComponent={<DrizzleComponents />}
+      />
+      <CollapseComponents
+        nameComponent={
+          <HeadingText
+            subtext="
+            How to configure icons to work with your project
+          "
+          >
+            ICONS MODIFICATION
+          </HeadingText>
+        }
+        contentComponent={<IconsComponents />}
       />
     </>
   )

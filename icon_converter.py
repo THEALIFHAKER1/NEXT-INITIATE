@@ -32,7 +32,7 @@ def resize_and_save(input_image_path, output_directory):
 
 if __name__ == '__main__':
     # Input image path
-    input_image_path = 'triangle.png'  # Replace with your image path
+    input_image_path = 'icon.png'  # Replace with your image path
 
     # Output directory to save resized images
     output_directory = 'public/icons'
