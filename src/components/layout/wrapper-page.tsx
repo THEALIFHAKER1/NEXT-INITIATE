@@ -23,13 +23,13 @@ export default function WrapperPage({
   }, [theme])
 
   useEffect(() => {
-    setTimeout(() => {
-      setLoaderStatus(true)
-    }, 2000)
+    // setTimeout(() => {
+    //   setLoaderStatus(true)
+    // }, 2000)
   }, [])
 
   if (!LoaderStatus) {
-    return <Loader loadingText="Loading" />
+    return <Loader />
   }
   return (
     <motion.div
