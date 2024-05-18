@@ -1,4 +1,10 @@
-import { Moon, SunMedium, Triangle } from "lucide-react"
+import {
+  CheckCheck,
+  Moon,
+  SunMedium,
+  Triangle,
+  TriangleAlert,
+} from "lucide-react"
 
 export type IconKeys = keyof typeof icons
 
@@ -10,6 +16,8 @@ const icons = {
   logo: Triangle,
   sun: SunMedium,
   moon: Moon,
+  danger: TriangleAlert,
+  success: CheckCheck,
 }
 
 export const Icons: IconsType = icons

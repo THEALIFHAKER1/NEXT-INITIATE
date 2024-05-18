@@ -2,6 +2,7 @@ import CollapseComponents from "@/components/custom/collapse-components"
 import { HeadingText } from "@/components/custom/heading-text"
 import { ThemeSwitcher } from "@/components/custom/theme-switcher"
 
+import DrizzleComponents from "./_components/drizzle-components/drizzle-components"
 import ServerClientComponets from "./_components/server-client-components/server-client-components"
 
 export default function DocsPage() {
@@ -18,6 +19,18 @@ export default function DocsPage() {
           </HeadingText>
         }
         contentComponent={<ServerClientComponets />}
+      />
+      <CollapseComponents
+        nameComponent={
+          <HeadingText
+            subtext="
+            How to configure drizzle to work with your project
+          "
+          >
+            DRIZZLE MODIFICATION
+          </HeadingText>
+        }
+        contentComponent={<DrizzleComponents />}
       />
     </>
   )
