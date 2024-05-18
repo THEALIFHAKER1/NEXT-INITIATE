@@ -7,7 +7,7 @@ export const env = createEnv({
    * isn't built with invalid env vars.
    */
   server: {
-    POSTGRES_URL: z.string().url(),
+    // POSTGRES_URL: z.string().url(),
     NODE_ENV: z
       .enum(["development", "test", "production"])
       .default("development"),
@@ -18,7 +18,7 @@ export const env = createEnv({
     NEXT_PUBLIC_DOCS_URL: z.string().min(1).optional(),
   },
   runtimeEnv: {
-    POSTGRES_URL: process.env.POSTGRES_URL,
+    // POSTGRES_URL: process.env.POSTGRES_URL,
     NEXT_PUBLIC_APP_URL: process.env.NEXT_PUBLIC_APP_URL,
     NEXT_PUBLIC_DOCS_URL: process.env.NEXT_PUBLIC_DOCS_URL,
     NODE_ENV: process.env.NODE_ENV,
