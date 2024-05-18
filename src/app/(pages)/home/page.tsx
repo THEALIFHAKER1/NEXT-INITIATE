@@ -54,13 +54,12 @@ function GetStartModal() {
             Learn how to get started with {siteConfig.name}
           </DrawalogDescription>
         </DrawalogHeader>
-        <DrawalogBody className="space-y-4 pb-4 text-center text-sm sm:pb-0 sm:text-left">
+        <DrawalogBody className="space-y-4 overflow-hidden pb-4 text-center text-sm sm:pb-0 sm:text-left">
           <p>
             To create a new project using {siteConfig.name}, run the following
             command:
           </p>
           <CopyCommand />
-
           <p>
             For more information, check out the official documentation or visit
             the Github repository.
@@ -93,9 +92,11 @@ function CopyCommand() {
   return (
     <div className="relative">
       <pre
-        className={cn("overflow-x-auto rounded-lg border bg-foreground/10 p-4")}
+        className={cn(
+          "select-text overflow-x-auto rounded-lg border bg-foreground/10 p-4 pr-14 text-xs sm:text-base"
+        )}
       >
-        <div className="select-text text-wrap text-left">{npm}</div>
+        {npm}
       </pre>
       <CopyNpmCommandButton
         commands={{
@@ -104,7 +105,7 @@ function CopyCommand() {
           pnpm: "pnpx create-next-app -e https://github.com/THEALIFHAKER1/NEXT-INITIATE",
           bun: "bun create next-app -e https://github.com/THEALIFHAKER1/NEXT-INITIATE",
         }}
-        className={cn("absolute right-4 top-7")}
+        className={cn("absolute right-4 top-4")}
       />
     </div>
   )

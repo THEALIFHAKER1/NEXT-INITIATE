@@ -39,7 +39,7 @@ interface DrawalogProps extends BaseProps {
   asChild?: true
 }
 
-const desktop = "(min-width: 768px)"
+const desktop = "(min-width: 640px)"
 
 const Drawalog = ({ children, ...props }: RootDrawalogProps) => {
   const [open, setOpen] = useState(false)
