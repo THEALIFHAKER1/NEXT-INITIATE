@@ -7,7 +7,8 @@ import ServerClientComponets from "./_components/server-client-components/server
 export default function DocsPage() {
   return (
     <>
-      <nav>
+      <nav className="flex items-center justify-between py-5 align-middle">
+        <div>Documentation</div>
         <ThemeSwitcher />
       </nav>
       <CollapseComponents
