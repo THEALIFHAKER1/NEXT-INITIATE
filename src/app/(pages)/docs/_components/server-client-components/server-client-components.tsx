@@ -15,8 +15,7 @@ export default function ServerClientComponents() {
 
       <div>
         <CodeSnippet
-          code={`
-<div className="grid gap-2 rounded-xl bg-foreground/20 p-5">
+          code={`<div className="grid gap-2 rounded-xl bg-foreground/20 p-5">
   This is server component (parent)
   <ClientComponent> // need to "use client" and have a child component
     <ServerComponents /> // must be a child component under client component
