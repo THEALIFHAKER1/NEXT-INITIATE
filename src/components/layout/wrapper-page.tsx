@@ -17,27 +17,31 @@ export default function WrapperPage({
   const { theme } = useTheme()
   const [currentTheme, setCurrentTheme] = useState(theme)
   const [LoaderStatus, setLoaderStatus] = useSessionStorage("firstload", false)
+  const [isMounted, setIsMounted] = useState(false)
 
   useEffect(() => {
+    setIsMounted(true)
+
+    if (isMounted && !LoaderStatus) {
+      setTimeout(() => {
+        setLoaderStatus(true)
+      }, 2000)
+    }
+
     setCurrentTheme(theme)
-  }, [theme])
+  }, [isMounted, LoaderStatus, setLoaderStatus, theme])
 
-  useEffect(() => {
-    // setTimeout(() => {
-    //   setLoaderStatus(true)
-    // }, 2000)
-  }, [])
-
-  if (!LoaderStatus) {
-    return <Loader />
+  if (!isMounted || !LoaderStatus) {
+    return <Loader loadingText="Loading..." />
   }
+
   return (
     <motion.div
       key={`${pathname}-${currentTheme}`}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ ease: "easeInOut", duration: 0.75 }}
-      className={`h-full`}
+      className="h-full"
     >
       {children}
     </motion.div>
