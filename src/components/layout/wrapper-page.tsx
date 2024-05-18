@@ -32,7 +32,7 @@ export default function WrapperPage({
   }, [isMounted, LoaderStatus, setLoaderStatus, theme])
 
   if (!isMounted || !LoaderStatus) {
-    return <Loader loadingText="Loading..." />
+    return <Loader />
   }
 
   return (
