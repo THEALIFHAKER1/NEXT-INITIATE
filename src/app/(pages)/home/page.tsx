@@ -22,7 +22,7 @@ function HomePage() {
   return (
     <>
       <div className="container flex h-full max-w-[64rem] flex-col items-center justify-center gap-4 text-center">
-        <Icons.logo className="h-20 w-20" />
+        <Icons.logo className="h-20 w-20 transition-all hover:h-28 hover:w-28 hover:animate-pulse" />
         <TextDecryption
           targetText={siteConfig.name}
           className="text-4xl font-semibold sm:text-5xl md:text-6xl lg:text-7xl"
@@ -67,8 +67,8 @@ function GetStartModal() {
         </DrawalogBody>
         <DrawalogFooter>
           <Link
-            href={`${siteConfig.links.docs}`}
-            target="_blank"
+            href={`/docs`}
+            // target="_blank"
             className={cn(buttonVariants({ variant: "default" }))}
           >
             Documentation
