@@ -1,12 +1,13 @@
 import { Icons } from "@/components/icons/icons"
 
 import InstructionsDrizzle from "./instructions-drizzle"
+import TextExample from "./text-example"
 
 export default function DrizzleComponents() {
   return (
     <div className="flex flex-col gap-3">
       <div className="grid gap-2 rounded-xl bg-foreground/20 p-5">
-        example of drizzle component
+        <TextExample />
       </div>
 
       <div className="grid gap-2 rounded-xl bg-foreground/20 p-5">
