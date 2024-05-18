@@ -87,3 +87,35 @@ export function CopyNpmCommandButton({
     </DropdownMenu>
   )
 }
+
+// copy code
+export function CopyCodeButton({ code }: { code: string }) {
+  const [hasCopied, setHasCopied] = useState(false)
+
+  useEffect(() => {
+    setTimeout(() => {
+      setHasCopied(false)
+    }, 2000)
+  }, [hasCopied])
+
+  const copyCode = useCallback(async (value: string) => {
+    await copyToClipboard(value)
+    setHasCopied(true)
+  }, [])
+
+  return (
+    <Button
+      size="icon"
+      variant="default"
+      onClick={() => copyCode(code)}
+      className="relative z-10 h-6 w-6"
+    >
+      {hasCopied ? (
+        <CheckIcon className="h-3 w-3" />
+      ) : (
+        <ClipboardIcon className="h-3 w-3" />
+      )}
+      <span className="sr-only">Copy</span>
+    </Button>
+  )
+}
