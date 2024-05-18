@@ -1,9 +1,9 @@
 "use client"
 
 import { useState } from "react"
+import { useMediaQuery } from "usehooks-ts"
 
 import { cn } from "@/lib/utils"
-import { useMediaQuery } from "@/hooks/use-media-query"
 import {
   Dialog,
   DialogClose,
