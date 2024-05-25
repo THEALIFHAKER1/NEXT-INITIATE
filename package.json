@@ -27,7 +27,6 @@
     "framer-motion": "^11.1.9",
     "lucide-react": "^0.378.0",
     "next": "14.2.3",
-    "next-pwa": "^5.6.0",
     "next-themes": "^0.3.0",
     "react": "^18",
     "react-dom": "^18",
@@ -37,6 +36,7 @@
     "vaul": "^0.9.1"
   },
   "devDependencies": {
+    "@serwist/next": "^9.0.2",
     "@types/eslint": "^8.56.10",
     "@types/next-pwa": "^5.6.9",
     "@types/node": "^20",
@@ -50,6 +50,7 @@
     "postcss": "^8",
     "prettier": "^3.2.5",
     "prettier-plugin-tailwindcss": "^0.5.14",
+    "serwist": "^9.0.2",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
   }
