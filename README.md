@@ -1,6 +1,6 @@
 # NEXT INITIATE
 
-NEXT.js 14+ starter template with app router, shadcn/ui, typesafe env, icons and configs setup.
+NEXT.js 15+ starter template with app router, shadcn/ui, typesafe env, icons and configs setup.
 
 ## Usage
 
@@ -32,7 +32,7 @@ cp .env.example .env.local
 
 This template uses [shadcn](https://github.com/shadcn)'s Next.js app structure from [shadcn/ui](https://ui.shadcn.com/).
 
-- Next.js 14+ `/app` router
+- Next.js 15+ `/app` router
 - TypeScript
 - Tailwind CSS
 - shadcn/ui (Radix UI + Tailwind)

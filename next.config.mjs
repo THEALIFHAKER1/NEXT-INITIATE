@@ -2,6 +2,9 @@
 import withSerwistInit from "@serwist/next"
 
 const nextConfig = {
+  experimental: {
+    reactCompiler: true,
+  },
   images: {
     remotePatterns: [
       {

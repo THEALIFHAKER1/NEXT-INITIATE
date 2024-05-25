@@ -6,7 +6,7 @@ export const siteConfig: SiteTypes = {
   name: "NEXT INITIATE",
   author: "THEALIFHAKER1",
   description:
-    "Next.js 14+ starter template with app router, shadcn/ui, typesafe env, icons and configs setup.",
+    "Next.js 15+ starter template with app router, shadcn/ui, typesafe env, icons and configs setup.",
   keywords: [
     "next",
     "react",
