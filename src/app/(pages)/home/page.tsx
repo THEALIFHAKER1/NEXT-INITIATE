@@ -87,8 +87,7 @@ function GetStartModal() {
 }
 
 function CopyCommand() {
-  const npm =
-    "npx create-next-app -e https://github.com/THEALIFHAKER1/NEXT-INITIATE"
+  const npm = "npx create-next-initiate"
   return (
     <div className="relative">
       <pre
