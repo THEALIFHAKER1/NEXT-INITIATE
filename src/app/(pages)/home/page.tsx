@@ -89,23 +89,22 @@ function GetStartModal() {
 function CopyCommand() {
   const npm = "npx create-next-initiate"
   return (
-    <div className="relative">
-      <pre
-        className={cn(
-          "select-text overflow-x-auto rounded-lg border bg-foreground/10 p-4 pr-14 text-xs sm:text-base"
-        )}
-      >
-        {npm}
-      </pre>
-      <CopyNpmCommandButton
-        commands={{
-          npm: npm,
-          yarn: "yarn create next-app -e https://github.com/THEALIFHAKER1/NEXT-INITIATE",
-          pnpm: "pnpx create-next-app -e https://github.com/THEALIFHAKER1/NEXT-INITIATE",
-          bun: "bun create next-app -e https://github.com/THEALIFHAKER1/NEXT-INITIATE",
-        }}
-        className={cn("absolute right-4 top-4")}
-      />
+    <div className="flex w-full flex-col items-center ">
+      <div className="relative flex h-full w-full ">
+        <div className="relative flex w-full items-center rounded-lg border border-purple-200/20 bg-purple-100/10 px-2 py-2 text-sm md:px-3 md:py-3  lg:px-5 lg:py-4 ">
+          <code className="mr-12">{npm}</code>
+          {/* <ClipboardSelect client:load /> */}
+          <CopyNpmCommandButton
+            commands={{
+              npm: npm,
+              yarn: "yarn create-next-initiate",
+              pnpm: "pnpx create-next-initiate",
+              bun: "bun create-next-initiate",
+            }}
+            className={cn("absolute right-4 top-4")}
+          />
+        </div>
+      </div>
     </div>
   )
 }
