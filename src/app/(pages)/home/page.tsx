@@ -99,7 +99,7 @@ function CopyCommand() {
               npm: npm,
               yarn: "yarn create-next-initiate",
               pnpm: "pnpx create-next-initiate",
-              bun: "bun create-next-initiate",
+              bun: "bunx create-next-initiate",
             }}
             className={cn("absolute right-4 top-4")}
           />
