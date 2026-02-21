@@ -1,6 +1,6 @@
-import CollapseComponents from "@/components/custom/collapse-components"
-import { HeadingText } from "@/components/custom/heading-text"
-import { ThemeSwitcher } from "@/components/custom/theme-switcher"
+import CollapseComponents from "@/components/ui/custom/collapse-components"
+import { HeadingText } from "@/components/ui/custom/heading-text"
+import { ThemeSwitcher } from "@/components/ui/custom/theme-switcher"
 
 import IconsComponents from "./_components/icons-components/icons-components"
 import ServerClientComponets from "./_components/server-client-components/server-client-components"

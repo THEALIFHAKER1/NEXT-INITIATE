@@ -5,7 +5,7 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/ui/accordion"
+} from "@/components/ui/shadcn/accordion"
 
 interface CollapseComponentsProps {
   nameComponent: React.ReactNode
@@ -20,7 +20,7 @@ export default function CollapseComponents({
   return (
     <Accordion type="single" collapsible defaultValue={open ? "item" : ""}>
       <AccordionItem value="item">
-        <AccordionTrigger className="whitespace-nowrap text-left hover:no-underline">
+        <AccordionTrigger className="text-left whitespace-nowrap hover:no-underline">
           {nameComponent}
         </AccordionTrigger>
         <AccordionContent>{contentComponent}</AccordionContent>

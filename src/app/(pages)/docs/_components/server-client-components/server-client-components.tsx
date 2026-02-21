@@ -1,4 +1,4 @@
-import CodeSnippet from "@/components/custom/code-snippet"
+import CodeSnippet from "@/components/ui/custom/code-snippet"
 
 import ClientComponent from "./client-components"
 import ServerComponents from "./server-components"
@@ -6,7 +6,7 @@ import ServerComponents from "./server-components"
 export default function ServerClientComponents() {
   return (
     <div className="flex flex-col gap-3">
-      <div className="grid gap-2 rounded-xl bg-foreground/20 p-5">
+      <div className="bg-foreground/20 grid gap-2 rounded-xl p-5">
         This is server component (parent)
         <ClientComponent>
           <ServerComponents />

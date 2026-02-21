@@ -73,7 +73,7 @@ export default function RootLayout({
       <head />
       <body
         className={`
-          !h-dvh
+          h-dvh!
           select-none
           overscroll-none 
           bg-background
@@ -92,7 +92,7 @@ export default function RootLayout({
           <WrapperPage>
             <main
               vaul-drawer-wrapper=""
-              className="mx-auto h-full max-w-screen-2xl"
+              className="mx-auto h-full max-w-(--breakpoint-2xl)"
             >
               {children}
             </main>

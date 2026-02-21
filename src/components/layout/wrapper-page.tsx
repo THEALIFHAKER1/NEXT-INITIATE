@@ -1,9 +1,9 @@
 "use client"
 
-import { useEffect, useState } from "react"
-import { usePathname } from "next/navigation"
-import { motion } from "framer-motion"
+import { animate } from "animejs"
 import { useTheme } from "next-themes"
+import { usePathname } from "next/navigation"
+import { useEffect, useRef, useState } from "react"
 import { useSessionStorage } from "usehooks-ts"
 
 import Loader from "./loader"
@@ -18,6 +18,7 @@ export default function WrapperPage({
   const [currentTheme, setCurrentTheme] = useState(theme)
   const [LoaderStatus, setLoaderStatus] = useSessionStorage("firstload", false)
   const [isMounted, setIsMounted] = useState(false)
+  const contentRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     setIsMounted(true)
@@ -31,19 +32,32 @@ export default function WrapperPage({
     setCurrentTheme(theme)
   }, [isMounted, LoaderStatus, setLoaderStatus, theme])
 
+  useEffect(() => {
+    const node = contentRef.current
+    if (!node || !isMounted || !LoaderStatus) return
+
+    const animation = animate(node, {
+      opacity: [0, 1],
+      duration: 750,
+      ease: "inOutQuad",
+    })
+
+    return () => {
+      animation.pause()
+    }
+  }, [pathname, currentTheme, isMounted, LoaderStatus])
+
   if (!isMounted || !LoaderStatus) {
     return <Loader />
   }
 
   return (
-    <motion.div
+    <div
       key={`${pathname}-${currentTheme}`}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ ease: "easeInOut", duration: 0.75 }}
-      className="h-full"
+      ref={contentRef}
+      className="h-full opacity-0"
     >
       {children}
-    </motion.div>
+    </div>
   )
 }

@@ -1,31 +1,31 @@
-"use client"
+"use client";
 
-import { useCallback, useEffect, useState } from "react"
-import { type DropdownMenuTriggerProps } from "@radix-ui/react-dropdown-menu"
-import { CheckIcon, ClipboardIcon } from "lucide-react"
+import { useCallback, useEffect, useState } from "react";
+import { type DropdownMenuTriggerProps } from "@radix-ui/react-dropdown-menu";
+import { CheckIcon, ClipboardIcon } from "lucide-react";
 
-import { cn } from "@/lib/utils"
-import { Button } from "@/components/ui/button"
+import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/shadcn/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
+} from "@/components/ui/shadcn/dropdown-menu";
 
 interface CopyNpmCommandButtonProps extends DropdownMenuTriggerProps {
   commands: Required<{
-    npm: string
-    yarn: string
-    pnpm: string
-    bun: string
-  }>
+    npm: string;
+    yarn: string;
+    pnpm: string;
+    bun: string;
+  }>;
 }
 export async function copyToClipboard(value: string) {
   try {
-    await navigator.clipboard.writeText(value)
+    await navigator.clipboard.writeText(value);
   } catch (error) {
-    console.error("Failed to copy:", error)
+    console.error("Failed to copy:", error);
   }
 }
 
@@ -33,18 +33,18 @@ export function CopyNpmCommandButton({
   commands,
   className,
 }: CopyNpmCommandButtonProps) {
-  const [hasCopied, setHasCopied] = useState(false)
+  const [hasCopied, setHasCopied] = useState(false);
 
   useEffect(() => {
     setTimeout(() => {
-      setHasCopied(false)
-    }, 2000)
-  }, [hasCopied])
+      setHasCopied(false);
+    }, 2000);
+  }, [hasCopied]);
 
   const copyCommand = useCallback(async (value: string) => {
-    await copyToClipboard(value)
-    setHasCopied(true)
-  }, [])
+    await copyToClipboard(value);
+    setHasCopied(true);
+  }, []);
 
   return (
     <DropdownMenu>
@@ -85,23 +85,23 @@ export function CopyNpmCommandButton({
         )}
       </DropdownMenuContent>
     </DropdownMenu>
-  )
+  );
 }
 
 // copy code
 export function CopyCodeButton({ code }: { code: string }) {
-  const [hasCopied, setHasCopied] = useState(false)
+  const [hasCopied, setHasCopied] = useState(false);
 
   useEffect(() => {
     setTimeout(() => {
-      setHasCopied(false)
-    }, 2000)
-  }, [hasCopied])
+      setHasCopied(false);
+    }, 2000);
+  }, [hasCopied]);
 
   const copyCode = useCallback(async (value: string) => {
-    await copyToClipboard(value)
-    setHasCopied(true)
-  }, [])
+    await copyToClipboard(value);
+    setHasCopied(true);
+  }, []);
 
   return (
     <Button
@@ -117,5 +117,5 @@ export function CopyCodeButton({ code }: { code: string }) {
       )}
       <span className="sr-only">Copy</span>
     </Button>
-  )
+  );
 }
