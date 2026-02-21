@@ -21,7 +21,7 @@ import { Icons } from "@/components/icons/icons";
 function HomePage() {
   return (
     <>
-      <div className="container flex h-full max-w-5xl flex-col items-center justify-center gap-4 text-center">
+      <div className="container flex h-full flex-col items-center justify-center gap-4 text-center">
         <Icons.logo className="h-20 w-20 transition-all hover:h-28 hover:w-28 hover:animate-pulse" />
         <TextDecryption
           targetText={siteConfig.name}
