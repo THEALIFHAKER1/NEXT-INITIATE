@@ -1,11 +1,11 @@
 export default function InstructionsIcons() {
   return (
     <>
-      <div className=" w-fit rounded-xl bg-background/50 p-4">
+      <div className="w-fit rounded-xl bg-background/50 p-4">
         <p>
           - Add your icon on root projects as <b>&quot;icon.png&quot;</b>
         </p>
-        <div>
+        <div className="px-4">
           <li>open terminal on root project</li>
           <li>
             install pillow <b>&quot;pip install Pillow&quot;</b>
@@ -16,5 +16,5 @@ export default function InstructionsIcons() {
         </div>
       </div>
     </>
-  )
+  );
 }
